@@ -1,73 +1,99 @@
-# React + TypeScript + Vite
+# Web LAB-2 - Semantik HTML ve Erişilebilirlik
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📝 Hakkında
+Bu proje, Web Tasarımı ve Programlama dersi LAB-2 kapsamında semantik HTML5, erişilebilirlik (a11y) ilkeleri ve form temelleri üzerine geliştirilmiştir.
 
-Currently, two official plugins are available:
+## 👨‍💻 Geliştirici
+- **Ad Soyad:** Ahmed Hüsrev Sayın
+- **Öğrenci No:** 225541103
+- **Bölüm:** Yazılım Mühendisliği
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🎯 LAB-2 Öğrenme Hedefleri
+- ✅ Semantik HTML5 etiketlerini doğru kullanma
+- ✅ Erişilebilirlik (a11y) ilkelerini uygulama
+- ✅ Heading hiyerarşisi ve alt metinler
+- ✅ ARIA özniteliklerini kullanma
+- ✅ Klavye navigasyonu (Tab, focus)
+- ✅ Erişilebilir form elemanları
+- ✅ HTML5 form doğrulama
+- ✅ Lighthouse erişilebilirlik testi (90+ puan)
 
-## React Compiler
+## 🛠️ Kullanılan Teknolojiler
+- React 18
+- TypeScript 5
+- Vite 5
+- Semantik HTML5
+- CSS3
+- ARIA (Accessible Rich Internet Applications)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 📦 Kurulum
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🚀 Çalıştırma
+```bash
+npm run dev
 ```
+
+## 🎨 Proje Yapısı
+```
+web-lab-hello/
+├── src/
+│   ├── App.tsx          # Ana bileşen (semantik HTML)
+│   ├── App.css          # Stil dosyası (a11y focus stilleri)
+│   └── main.tsx         # Giriş noktası
+├── public/
+│   └── lighthouse-report.png  # Erişilebilirlik raporu
+├── index.html           # Ana HTML (lang="tr")
+└── README.md
+```
+
+## ♿ Erişilebilirlik Özellikleri
+
+### Semantik HTML
+- `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>`
+- Tek `<h1>` ve doğru heading hiyerarşisi
+- Her section bir `<h2>` ile başlar
+
+### ARIA Kullanımı
+- `aria-label` ile navigasyon etiketleme
+- `aria-describedby` ile form yardım metinleri
+- `role="alert"` ile hata mesajları
+
+### Klavye Navigasyonu
+- Tab ile tüm interaktif elemanlara erişim
+- Skip navigation linki (Ana içeriğe atla)
+- Belirgin focus göstergesi (outline)
+
+### Form Erişilebilirliği
+- Her input'un `<label>` ilişkisi var
+- `required`, `minlength`, `type` doğrulama
+- Hata mesajı alanları hazır (`role="alert"`)
+
+### Görsel Erişilebilirlik
+- Tüm görsellerde anlamlı alt metin
+- `<figure>` ve `<figcaption>` kullanımı
+- Dekoratif görsellerde `alt=""`
+
+## 🔍 Lighthouse Raporu
+_(Testi tamamlayıp görseli `public/lighthouse-report.png` olarak kaydettikten sonra burası görüntülenecektir.)_
+
+Lighthouse Erişilebilirlik Puanı: **.../100**
+
+![Lighthouse Raporu](public/lighthouse-report.png)
+
+## 📸 Ekran Görüntüleri
+[Projenizin ekran görüntülerini buraya ekleyin]
+
+## 🧪 Test Edilen Tarayıcılar
+- ✅ Chrome (son sürüm)
+- ✅ Firefox (son sürüm)
+- ✅ Safari (macOS)
+- ✅ Edge (son sürüm)
+
+## 📚 Kaynaklar
+- [MDN - HTML Semantics](https://developer.mozilla.org/en-US/docs/Glossary/Semantics)
+- [WCAG 2.1 Guidelines](https://www.w3.org/WAI/WCAG21/quickref/)
+- [The A11Y Project](https://www.a11yproject.com/)
+- [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/)
