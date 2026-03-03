@@ -35,7 +35,7 @@ function App() {
 
             <div className="about-text">
               <p>
-                Merhaba! Ben Ahmed Hüsrev Sayın, KTÜ Yazılım Mühendisliği
+                Merhaba! Ben Ahmed Hüsrev Sayın, Fırat Üniversitesi Yazılım Mühendisliği
                 öğrencisiyim. Web geliştirme ve kullanıcı arayüzü tasarımı
                 ile ilgileniyorum.
               </p>
