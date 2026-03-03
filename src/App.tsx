@@ -1,3 +1,5 @@
+import './App.css'
+
 function App() {
   return (
     <>
@@ -20,79 +22,103 @@ function App() {
         <section id="hakkimda" aria-labelledby="hakkimda-heading">
           <h2 id="hakkimda-heading">Hakkımda</h2>
 
-          <figure>
-            <img
-              src="/profil.jpg"
-              alt="Ahmed Hüsrev Sayın'ın profesyonel profil fotoğrafı"
-              width="200"
-              height="200"
-            />
-            <figcaption>Yazılım Mühendisliği Öğrencisi</figcaption>
-          </figure>
+          <div className="about-content">
+            <figure>
+              <img
+                src="/profil.jpg"
+                alt="Ahmed Hüsrev Sayın'ın profesyonel profil fotoğrafı"
+                width="200"
+                height="200"
+              />
+              <figcaption>Yazılım Mühendisliği Öğrencisi</figcaption>
+            </figure>
 
-          <p>
-            Merhaba! Ben Ahmed Hüsrev Sayın, KTÜ Yazılım Mühendisliği öğrencisiyim.
-            Web geliştirme ve kullanıcı arayüzü tasarımı ile ilgileniyorum.
-          </p>
+            <div className="about-text">
+              <p>
+                Merhaba! Ben Ahmed Hüsrev Sayın, KTÜ Yazılım Mühendisliği
+                öğrencisiyim. Web geliştirme ve kullanıcı arayüzü tasarımı
+                ile ilgileniyorum.
+              </p>
 
-          <h3>Kullandığım Teknolojiler</h3>
-          <ul>
-            <li>HTML5 & CSS3</li>
-            <li>JavaScript & TypeScript</li>
-            <li>React</li>
-            <li>Git & GitHub</li>
-          </ul>
+              <h3>Kullandığım Teknolojiler</h3>
+              <ul className="skill-tags" role="list">
+                <li>HTML5 &amp; CSS3</li>
+                <li>JavaScript</li>
+                <li>TypeScript</li>
+                <li>React</li>
+                <li>Git &amp; GitHub</li>
+                <li>Vite</li>
+              </ul>
+            </div>
+          </div>
         </section>
 
         <section id="projeler" aria-labelledby="projeler-heading">
           <h2 id="projeler-heading">Projelerim</h2>
 
-          <div className="projects-grid">
+          <div className="project-grid">
             <article className="project-card">
-              <h3>E-Ticaret Sitesi</h3>
-              <figure>
-                <img
-                  src="/project1.jpg"
-                  alt="E-ticaret sitesi ana sayfa ekran görüntüsü"
-                  width="400"
-                  height="300"
-                />
-                <figcaption>Modern e-ticaret arayüzü</figcaption>
-              </figure>
-              <p>
-                React ve TypeScript kullanarak geliştirdiğim responsive
-                e-ticaret sitesi. Ürün listeleme, sepet ve ödeme özellikleri içerir.
-              </p>
-              <h4>Kullanılan Teknolojiler:</h4>
-              <ul>
-                <li>React</li>
-                <li>TypeScript</li>
-                <li>Tailwind CSS</li>
-                <li>Context API</li>
-              </ul>
+              <img
+                src="/project1.jpg"
+                alt="E-ticaret sitesi ana sayfa ekran görüntüsü"
+                width="400"
+                height="300"
+              />
+              <div className="card-content">
+                <h3>E-Ticaret Sitesi</h3>
+                <p>
+                  React ve TypeScript kullanarak geliştirdiğim responsive
+                  e-ticaret sitesi. Ürün listeleme, sepet ve ödeme özellikleri içerir.
+                </p>
+                <ul className="skill-tags">
+                  <li>React</li>
+                  <li>TypeScript</li>
+                  <li>Tailwind CSS</li>
+                  <li>Context API</li>
+                </ul>
+              </div>
             </article>
 
             <article className="project-card">
-              <h3>Kişisel Blog</h3>
-              <figure>
-                <img
-                  src="/project2.jpg"
-                  alt="Blog sitesi yazı listesi ekran görüntüsü"
-                  width="400"
-                  height="300"
-                />
-                <figcaption>Minimalist blog tasarımı</figcaption>
-              </figure>
-              <p>
-                Markdown destekli kişisel blog platformu.
-                Yazılar kategorilere ayrılabilir ve etiketlenebilir.
-              </p>
-              <h4>Kullanılan Teknolojiler:</h4>
-              <ul>
-                <li>Next.js</li>
-                <li>Markdown</li>
-                <li>CSS Modules</li>
-              </ul>
+              <img
+                src="/project2.jpg"
+                alt="Blog sitesi yazı listesi ekran görüntüsü"
+                width="400"
+                height="300"
+              />
+              <div className="card-content">
+                <h3>Kişisel Blog</h3>
+                <p>
+                  Markdown destekli kişisel blog platformu.
+                  Yazılar kategorilere ayrılabilir ve etiketlenebilir.
+                </p>
+                <ul className="skill-tags">
+                  <li>Next.js</li>
+                  <li>Markdown</li>
+                  <li>CSS Modules</li>
+                </ul>
+              </div>
+            </article>
+
+            <article className="project-card">
+              <img
+                src="/project3.jpg"
+                alt="Hava durumu uygulaması arayüzü ekran görüntüsü"
+                width="400"
+                height="300"
+              />
+              <div className="card-content">
+                <h3>Hava Durumu App</h3>
+                <p>
+                  OpenWeather API kullanarak anlık hava durumu bilgisi
+                  veren JavaScript uygulaması.
+                </p>
+                <ul className="skill-tags">
+                  <li>JavaScript</li>
+                  <li>API</li>
+                  <li>Fetch</li>
+                </ul>
+              </div>
             </article>
           </div>
         </section>
