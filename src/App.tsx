@@ -2,10 +2,10 @@ import { useState, useEffect } from "react";
 import type { Project, Category, SortField, SortOrder } from "./types/project";
 import { fetchProjects } from "./services/projectService";
 import { applyFilters } from "./utils/projectHelpers";
-import Card from "./components/Card";
-import Input from "./components/Input";
-import Button from "./components/Button";
-import Alert from "./components/Alert";
+import { Card } from "./components/Card";
+import { Input } from "./components/Input";
+import { Button } from "./components/Button";
+import { Alert } from "./components/Alert";
 
 export default function App() {
   const [projects, setProjects] = useState<Project[]>([]);
@@ -51,6 +51,7 @@ export default function App() {
         <div className="flex flex-col sm:flex-row gap-4 mb-8">
           <Input
             id="search"
+            label="Proje Arama"
             placeholder="Proje ara..."
             value={search}
             onChange={e => setSearch(e.target.value)}
